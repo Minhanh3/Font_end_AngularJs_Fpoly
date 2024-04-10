@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en" >
+
+<head>
+    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <script src="../js/angular.min.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <!-- Nav tabs -->
+    <div class="container">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="qlksan.html">
+                    <img class="w-50"
+                        src="data:image/png;base64,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"
+                        alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="qlksan.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="trangdatphong.html">Đặt Phòng</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="lienhe.html">Liên Hệ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- end nav -->
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            </div>
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img height="400" src="https://www.hoteljob.vn/files/Pic/Th%C3%A1ng%204/Khach-san-la-gi-01.jpg"
+                        alt="Los Angeles" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img height="400"
+                        src="https://vcdn1-dulich.vnecdn.net/2022/07/29/hypat-1659069584-1659081355-1659095800.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=DOVzqNrlo-W0PARbtYdxWw"
+                        alt="Chicago" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img height="400" src="https://ezcloud.vn/wp-content/uploads/2019/03/kinh-doanh-khach-san-1.jpg"
+                        alt="New York" class="d-block w-100">
+                </div>
+            </div>
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+        <div class="h1" ng-controller="teude">
+            
+            {{tieude}}
+        </div>
+        <div class="row col-9">
+            <div class="mb-3 col-6">
+                <label for="" class="form-label">Họ và Tên</label>
+                <input type="text" name="" id="" class="form-control" placeholder="" aria-describedby="helpId" />
+            </div>
+            <div class="mb-3 col-6">
+                <label for="" class="form-label">Chứng Minh</label>
+                <input type="text" name="" id="" class="form-control" placeholder="" aria-describedby="helpId" />
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Email</label>
+                <input type="text" name="" id="" class="form-control" placeholder="" aria-describedby="helpId" />
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Giới Tính</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Nam
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Nữ
+                    </label>
+                </div>
+            </div>
+            <div class=" col-6">
+                <label for="" class="form-label">Số Điện Thoại</label>
+                <input type="text" name="" id="" class="form-control" placeholder="" aria-describedby="helpId" />
+            </div>
+            <div class="col-6">
+                <label for="" class="form-label">Chọn Phòng</label>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Phòng</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Ngày Sinh</label>
+                <input type="text" name="" id="" class="form-control" placeholder="" aria-describedby="helpId" />
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Hành Lý</label>
+                <input type="text" name="" id="" class="form-control" placeholder="" aria-describedby="helpId" />
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Hình Thức THanh Toán</label>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Thanh Toán</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+            <input name="" id="" class="btn btn-primary" type="button" value="Đặt Phòng" />
+        </div>
+    </div>
+    <script>
+        let app = angular.module('myApp', []);
+        app.controller('teude', function ($scope) {
+            $scope.tieude = 'Thông tin Khách Hàng'
+        })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

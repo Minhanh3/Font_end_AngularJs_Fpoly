@@ -1,0 +1,31 @@
+<div class="container" style=" text-align:center; margin-top: 25px;">
+    <div class="form-control" style="margin-top: 25px; margin-bottom: 25px">
+        <H1>Form Thêm</H1>
+        <div class="row">
+            <div class="col-6 mb-3">
+                <label for="hoTen" class="form-label">Họ và tên</label>
+                <input ng-model="hoTen" type="text" class="form-control" id="hoTen" placeholder="Trần Văn A">
+            </div>
+            <div class="col-6 mb-3">
+                <label for="maSV" class="form-label">Mã sinh viên</label>
+                <input ng-model="maSV" type="text" class="form-control" id="maSV" placeholder="PH12345">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 mb-3">
+                <label for="queQuan" class="form-label">Quê quán</label>
+                <input ng-model="queQuan" type="text" class="form-control" id="queQuan" placeholder="Hà Nội">
+            </div>
+            <div class="col-6 mb-3">
+                <label for="sex" class="form-label">Giới tính:</label>
+                <select class="form-select" id="sex" name="sex" required>
+                    <option value="Nam" selected>Nam</option>
+                    <option value="Nữ">Nữ</option>
+                </select>
+            </div>
+        </div>
+        <a href="#!/trang-chu"><button class="btn btn-outline-success">Quay lại trang chủ</button></a>
+
+        <button type="button" class="btn btn-success">Thêm</button>
+    </div>
+</div>

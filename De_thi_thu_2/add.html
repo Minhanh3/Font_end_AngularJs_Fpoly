@@ -1,0 +1,42 @@
+<h1>{{title}}</h1>
+<form ng-submit="addPost()">
+    <div class="mb-3">
+        <label for="" class="form-label">Tiêu đề</label>
+        <input ng-model="sach.tieu_de" type="text" name="" id="" class="form-control" placeholder="Nhập tiêu đề"
+            aria-describedby="helpId" />
+        <p ng-if="check.tieu_de">Nhập tiêu đề </p>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Nội dung</label>
+        <input ng-model="sach.noi_dung" type="text" name="" id="" class="form-control" placeholder="Nhập Nội dung"
+            aria-describedby="helpId" />
+        <p ng-if="check.noi_dung">Nhập Nội dung </p>
+
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Tác giả</label>
+        <input ng-model="sach.tac_gia" type="text" name="" id="" class="form-control" placeholder="Nhập Tác giả"
+            aria-describedby="helpId" />
+        <p ng-if="check.tac_gia">Nhập Tác giả </p>
+
+    </div>
+    <div class="mb-3">
+        <label for="the_loai" class="form-label">Thể Loại</label>
+        <select ng-model="sach.the_loai" class="form-select  name=" the_loai" id="">
+            <option disabled>Chọn thể loại</option>
+            <option value="Tin Tức">Tin Tức</option>
+            <option value="Truyện Ngắn">Truyện Ngắn</option>
+            <option value="Tiểu Thuyết">Tiểu Thuyết</option>
+        </select>
+        <p ng-if="check.tac_gia">Nhập Thể Loại </p>
+    </div>
+    <div class=" mb-3">
+        <label for="" class="form-label">Ngày đăng</label>
+        <input ng-model="sach.ngay_dang" type="date" name="" id="" class="form-control" aria-describedby="helpId" />
+        <p ng-if="check.ngay_dang">Nhập Ngày đăng</p>
+    </div>
+    <div class=" mb-3">
+        <button type="submit" class="btn btn-primary">Thêm Mới</button>
+    </div>
+
+</form>

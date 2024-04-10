@@ -1,0 +1,31 @@
+<div class="h2">Thông tin sinh viên</div>
+<div class="table-responsive">
+    <table class="table table-primary">
+        <thead>
+            <tr>
+                <th scope="col">STT</th>
+                <th scope="col">Họ tên</th>
+                <th scope="col">Mã SV</th>
+                <th scope="col">Quê Quán</th>
+                <th scope="col">Giới Tính</th>
+                <th scope="col">Option</th>
+            </tr>
+        </thead>
+        <tbody class="table">
+            <tr ng-repeat="student in listStudent">
+                <td scope="row">{{$index + 1}}</td>
+                <td>{{student.id}} </td>
+                <td>{{student.name}} </td>
+                <td>{{student.masv}} </td>
+                <td>{{student.from}} </td>
+                <td>{{student.sex}} </td>
+                <td>
+                    <button type="button" class="btn btn-info">View</button>
+                    <a href="#!edit"><button type="button" class="btn btn-secondary">Sửa</button></a>
+                    <button type="button" class="btn btn-danger">Xóa</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>

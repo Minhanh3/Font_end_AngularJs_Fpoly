@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css  ">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js "></script>
+    <!-- Lấy thư viện agularjs -->
+    <script src="/code/angularjs/libs/angular.min.js"></script>
+    <title>Buổi 4</title>
+</head>
+<!-- ng-/ directive(chỉ thị):dùng để mở rộng khả năng của html -->
+<!-- ng-app: dùng để định nghĩa vùng chúng ta sử dụng agularJS -->
+
+<body ng-app="myApp">
+    <!-- đưa ng-app vào thẻ body=sẽ dùng angularJS cho toàn bộ phần body -->
+    <div ng-controller="testController">
+        <!-- dùng ng-controller để gọi ra controller ở js -->
+        <h1>{{xinchao}}</h1>
+        <h1>{{so3}}</h1>
+        <h2>{{so1}}</h2>
+    </div>
+    <div ng-controller="testController1">
+        <h1>Thông tin</h1>
+        <p>Tên:{{ten}}</p>
+        <p>Tuổi:{{tuoi}}</p>
+        <p>Địa chỉ:{{diachi}}</p>
+        <p>Tên nyc:{{tennyc}}</p>
+        <p>Ngày ct:{{ngayct}}</p>
+    </div>
+    <div class="container">
+        <div ng-controller="dataStudent">
+            <h1>Thông tin lớp học</h1>
+            <p>Lớp:{{tenLop}}</p>
+            <p>Môn học:{{monHoc}}</p>
+            <p>Ca học:{{caHoc}}</p>
+            <h1>Thông tin sinh viên</h1>
+            <table border="1" class="table table-hover">
+                <thead>
+                    <th>Mã sinh viên</th>
+                    <th>Tên</th>
+                    <th>Tuổi</th>
+                    <th>Chuyên ngành</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{students[0].msv}}</td>
+                        <td>{{students[0].ten}}</td>
+                        <td>{{students[0].tuoi}}</td>
+                        <td>{{students[0].chuyenNganh}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{students[1].msv}}</td>
+                        <td>{{students[1].ten}}</td>
+                        <td>{{students[1].tuoi}}</td>
+                        <td>{{students[1].chuyenNganh}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{students[2].msv}}</td>
+                        <td>{{students[2].ten}}</td>
+                        <td>{{students[2].tuoi}}</td>
+                        <td>{{students[2].chuyenNganh}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Lấy dứ liệu bằng cách sử dụng vòng lặp- ng-repeat  -->
+            <!-- foreach(students as item) >Ngược lại với ng-repeat -->
+            <table border="1" style="width: 100%; text-align: justify;">
+                <thead>
+                    <th>Mã sinh viên</th>
+                    <th>Tên</th>
+                    <th>Tuổi</th>
+                    <th>Chuyên ngành</th>
+                </thead>
+                <tbody ng-repeat="item in students">
+                    <tr>
+                        <td>{{item.msv}}</td>
+                        <td>{{item.ten}}</td>
+                        <td>{{item.tuoi}}</td>
+                        <td>{{item.chuyenNganh}}</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script>
+    // Khởi tạo module 
+    // đặt agular cho vùng myApp-dòng 12 
+    let data = angular.module('myApp', []);
+    // 2 tham số trong module(tên của ng-app, thành phần phụ thuộc)
+    // Khởi tạo vùng controller 
+    data.controller('testController', myFunction);
+    // 2 tham số trong controller(tên của Controller, tên của Function)
+    function myFunction($scope) { // tham số $scope phải có để render dữ liệu
+        // Khai báo biến:
+        $scope.xinchao = 'Xin chào ^^';
+        $scope.so1 = 1;
+        $scope.so2 = 2;
+        $scope.so3 = $scope.so1 + $scope.so2;
+        // $scope.so3=(Number.$scope.so1+Number.$scope.so2);
+        console.log($scope.xinchao);
+    }
+    data.controller('testController1', nyc);
+    function nyc($scope) {
+        $scope.ten = 'Toàn';
+        $scope.tuoi = '18';
+        $scope.diachi = 'Yên Bái';
+        $scope.tennyc = 'Ế';
+        $scope.ngayct = 'Ế';
+    }
+    data.controller('dataStudent', listStudent);
+    function listStudent($scope) {
+        $scope.tenLop = 'SD18306';
+        $scope.monHoc = 'Front-end Framework';
+        $scope.caHoc = 'Ca 5';
+        $scope.students = [
+            {
+                msv: 'PH32021',
+                ten: 'Trương Nhật Toàn',
+                tuoi: '20',
+                chuyenNganh: 'PTPM'
+
+            },
+            {
+                msv: 'PH32064',
+                ten: 'Đoàn Trọng Thưởng',
+                tuoi: '20',
+                chuyenNganh: 'PTPM'
+            },
+            {
+                msv: 'PH32074',
+                ten: 'Lưu Xuân Tài',
+                tuoi: '20',
+                chuyenNganh: 'PTPM'
+            }
+        ]
+    }
+</script>
+
+</html>

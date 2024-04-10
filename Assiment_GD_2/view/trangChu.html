@@ -1,0 +1,38 @@
+<div class="h2 text-center mt-5">Danh Sách sản phẩm</div>
+<div>{{title}}</div>
+<div class="table-responsive">
+    <table class="table table-primary ">
+        <thead>
+            <tr>
+                <th scope="col">STT</th>
+                <th scope="col">ID</th>
+                <th scope="col">Tên Sách</th>
+                <th scope="col">Tác Giả</th>
+                <th scope="col">Ngôn Ngữ</th>
+                <th scope="col">Thể Loại</th>
+                <th scope="col">Số Trang</th>
+                <th scope="col">Giá Bán</th>
+                <th scope="col">Nhà Xuất Bản</th>
+                <th scope="col">Option</th>
+            </tr>
+        </thead>
+        <tbody ng-repeat="sach1 in listsach">
+            <tr class="" >
+                <td>{{$index +1}}</td>
+                <td>{{sach1.id}}</td>
+                <td>{{sach1.name}}</td>
+                <td>{{sach1.tacgia}}</td>
+                <td>{{sach1.ngongu}}</td>
+                <td>{{sach1.theloai}}</td> 
+                <td>{{sach1.sotrang}}</td>
+                <td>{{sach1.giaban|currency}}</td>
+                <td>{{sach1.nxban}}</td>
+                <td>
+                    <a href="#!trang-detail/{{sach1.id}}"><button type="button" class="btn btn-info">View</button></a>
+                    <a href="#!trang-update/{{sach1.id}}"><button type="button" class="btn btn-secondary">Edit</button></a>
+                    <button ng-click="deleteSach(sach1.id)" type="button" class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Thưởng Tết</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <script src="../angularjs/js/angular.min.js"></script>
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+</head>
+
+<body ng-app="myApp">
+    <div class="container">
+        <div class="row mt-4 justify-content-center">
+            <div class="col-sm-8" ng-controller="myCtrl">
+                <div class="card">
+                    <div class="card-header">Tinh Thuong Tet Nguyen Dan</div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="" class="form-label">Ho va ten</label>
+                                <input type="text" name="" id="" ng-model="name" class="form-control" placeholder=""
+                                    aria-describedby="helpId" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label">Luong</label>
+                                <input type="number" name="" id=""ng-model="salary" class="form-control" placeholder=""
+                                    aria-describedby="helpId" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="" class="form-label">Gioi Tinh</label>
+                                <div class="form-check">
+                                    <input ng-model="gender" value="Nam" class="form-check-input" type="radio" name="gender" id="gender" checker />
+                                    <label class="form-check-label" for="gender"> Nam </label>
+                                </div>
+                                <div class="form-check">
+                                    <input ng-model="gender" value="Nữ" class="form-check-input" type="radio" name="gender" id="gender" />
+                                    <label class="form-check-label" for="gender"> Nữ </label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="mb-3">
+                                    <label for="" class="form-label">Độ Tuổi</label>
+                                    <select ng-model="age" class="form-select " name="" id="" ng-options="a.age for a in list_age">
+                                        
+                                    </select>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer text-muted" >Tien thưởng {{getBonus()}} </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let app = angular.module("myApp", [])
+        app.controller("myCtrl", function ($scope) {
+            $scope.list_age = [
+                {
+                    age: "Duoi 25",
+                    rate: 0.07
+                }, {
+                    age: "Từ 25 - 40",
+                    rate: 0.1
+                }, {
+                    age: "Trên 40",
+                    rate: 0.15
+                },
+            ];
+             $scope.salary = 0;
+             $scope.gender = "Nam";
+             $scope.age= $scope.list_age[1]
+             $scope.getBonus = function(){
+                let bonus = $scope.age.rate * $scope.salary;
+                if ($scope.gender == "Nữ") {
+                    bonus+= 200000;
+                } else {
+                    
+                }
+                return bonus;
+             }
+        })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

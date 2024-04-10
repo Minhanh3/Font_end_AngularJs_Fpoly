@@ -1,0 +1,66 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "username": "manhdd",
+      "password": "2ssss",
+      "fullname": "Nguyen duc manh"
+    },
+    {
+      "id": "2",
+      "username": "manhdd",
+      "password": "2ssss",
+      "fullname": "Nguyen duc manh"
+    },
+    {
+      "id": "3",
+      "username": "manhdd",
+      "password": "2ssss",
+      "fullname": "Nguyen duc manh"
+    }
+  ],
+  "Student": [
+    {
+      "name": "Manh nguyen",
+      "masv": "Ph31242",
+      "from": "ha noiaaaa",
+      "sex": "Nam",
+      "id": "SV002"
+    },
+    {
+      "name": "Manh nguyen dz",
+      "masv": "Ph31242",
+      "from": "ha noiaaaa",
+      "sex": "Nữ",
+      "id": "SV003"
+    },
+    {
+      "name": "Manh nguyen dz",
+      "masv": "Ph31242",
+      "from": "ha noiaaaa",
+      "sex": "Nữ",
+      "id": "SV004"
+    },
+    {
+      "name": "Manh nguyen heooe",
+      "masv": "Ph31242",
+      "from": "ha noi",
+      "sex": "Khác",
+      "id": "SV005"
+    },
+    {
+      "id": "ba7d",
+      "name": "mạnh",
+      "masv": "Ph31242",
+      "from": "vinh phuc",
+      "sex": "1"
+    },
+    {
+      "id": "2a57",
+      "name": "Manh nguyen dz",
+      "masv": "ph54444",
+      "from": "vinh phuc2",
+      "sex": "1"
+    }
+  ]
+}

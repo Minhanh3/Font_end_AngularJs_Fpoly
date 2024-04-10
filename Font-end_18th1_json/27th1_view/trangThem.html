@@ -1,0 +1,39 @@
+<div class="h1 text-center">
+    Thêm Sinh Viên
+</div>
+<form action="" ng-submit="addStudent()">
+    <div class="mb-3 row col-9">
+        <label for="name" class="col-4 col-form-label">Họ Tên</label>
+        <div class="col-8">
+            <input ng-model="student.name" type="text" required class="form-control" name="name" id="inputName"
+                placeholder="Name" />
+                <span ng-if="test.testName" class="text-danger">Vui lòng nhập vào tên</span>
+        </div>
+    </div>
+    <div class="mb-3 row col-9">
+        <label for="masv" class="col-4 col-form-label">Mã Sinh viên</label>
+        <div class="col-8">
+            <input ng-model="student.masv" type="text" required class="form-control" name="masv" id="masv"
+                placeholder="Mã sv" />
+        </div>
+    </div>
+    <div class="mb-3 row col-9">
+        <label for="from" class="col-4 col-form-label">Quê Quán</label>
+        <div class="col-8">
+            <input ng-model="student.from" type="text" required class="form-control" name="from" id="from"
+                placeholder="Quê quán" />
+        </div>
+    </div>
+    <div class="mb-3 row col-9">
+        <label for="sex" class="form-label">Giới Tính:</label>
+        <select ng-model="student.sex" name="sex" required class="form-select col-8" aria-label="Default select example">
+            <option selected>Chọn Giới Tính</option>
+            <option value="1">Nam</option>
+            <option value="2">Nữ</option>
+        </select>
+    </div>
+    <a href="#!/trang-chu"><button type="button" class="btn btn-warning">Quay Lại</button></a>
+    <button type="submit" class="btn btn-primary">
+        Thêm
+    </button>
+</form>

@@ -1,0 +1,33 @@
+<h1> {{title}}</h1>
+<div class="table-responsive">
+    <table class="table table-primary">
+        <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">tieu_de</th>
+                <th scope="col">noi_dung</th>
+                <th scope="col">tac_gia</th>
+                <th scope="col">the_loai</th>
+                <th scope="col">ngay_dang</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="" ng-repeat="item in listpost">
+                <td>{{item.id}} </td>
+                <td>{{item.tieu_de}} </td>
+                <td> {{item.noi_dung}}</td>
+                <td> {{item.tac_gia}}</td>
+                <td> {{item.the_loai}}</td>
+                <td> {{item.ngay_dang | date:'dd/MM/yyyy'}}</td>
+                <td> <a href="#!detail/post/{{item.id}}"><button type="button" class="btn btn-primary">Thông
+                            tin</button></a>
+                    <a href="#!edit/post/{{item.id}}"><button type="button" class="btn btn-warning">Chỉnh
+                            sửa</button></a>
+                    <button ng-click="deletePost(item.id)" type="button" class="btn btn-danger">Xóa</button>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>

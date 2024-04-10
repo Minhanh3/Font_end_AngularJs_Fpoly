@@ -1,0 +1,64 @@
+<div class="h3 text-center mt-5">
+    Thông tin Chi Tiết Sản phẩm
+</div>
+<div>{{title}}</div>
+<form action="" >
+    <div class="row h4">
+        <div class="col-sm-6">
+            <div class="mb-3">
+                <label for="name" class="form-label">Tên Sách</label>
+                <input ng-model="sach.name" type="text" readonly name="name" id="" required
+                    class="form-control" placeholder="" aria-describedby="helpId" />
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="mb-3">
+                <label for="tacgia" class="form-label">Tác Giả</label>
+                <input ng-model="sach.tacgia" type="text" readonly name="tacgia"  id="" required
+                    class="form-control" placeholder="" aria-describedby="helpId" />
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <label for="ngongu" class="form-label">Ngôn Ngữ</label>
+            <select ng-model="sach.ngongu" class="form-select" id="" disabled name="ngongu" required>
+                <option ng-selected="sach.ngongu == 1" value="Anh" selected>Anh</option>
+                <option ng-selected="sach.ngongu == 2" value="Tiếng Việt">Tiếng Việt</option>
+                <option ng-selected="sach.ngongu == 3" value="Trung Quốc">Trung Quốc</option>
+                <option ng-selected="sach.ngongu == 4" value="Nhật Bản">Nhật Bản</option>
+                <option ng-selected="sach.ngongu == 5" value="Hàn Quốc">Hàn Quốc</option>
+            </select>
+        </div>
+        <div class="col-sm-6">
+            <label for="theloai" class="form-label">Thể Loại</label>
+            <select ng-model="sach.theloai" class="form-select" id="" disabled name="theloai" required>
+                <option ng-selected="sach.ngongu == 1" value="Thiếu Nhi" selected>Thiếu Nhi</option>
+                <option ng-selected="sach.ngongu == 2" value="Tâm Lý">Tâm Lý</option>
+                <option ng-selected="sach.ngongu == 3" value="Tình cảm">Tình cảm</option>
+                <option ng-selected="sach.ngongu == 4" value="Tiểu Thuyết">Tiểu Thuyết</option>
+                <option ng-selected="sach.ngongu == 5" value="Văn hóa xã hội">Văn hóa xã hội</option>
+            </select>
+        </div>
+        <div class="col-sm-6">
+            <div class="mb-3">
+                <label for="sotrang" class="form-label">Số Trang</label>
+                <input ng-model="sach.sotrang" type="number" readonly min="100" required name="sotrang" id=""
+                    class="form-control" placeholder="" aria-describedby="helpId" />
+                </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="mb-3">
+                <label for="giaban" class="form-label">Giá Bán</label>
+                <input ng-model="sach.giaban" readonly type="number" min="10000" max="10000000" required name="giaban" id=""
+                    class="form-control" placeholder="" aria-describedby="helpId" />
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="mb-3">
+                <label for="nxban" class="form-label">Nhà Xuất Bản</label>
+                <input ng-model="sach.nxban" type="text" readonly minlength="3" maxlength="100" required name="nxban" id=""
+                    class="form-control" placeholder="" aria-describedby="helpId" />
+            </div>
+        </div>
+    </div>
+    <a href="#!trang-chu"><button type="button" class="btn btn-info">Quay Lại</button> </a>
+</form>

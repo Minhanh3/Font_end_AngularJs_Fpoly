@@ -1,0 +1,37 @@
+{
+    "sach": [
+      {
+        "ten": "đồng chí",
+        "theLoai": "Thơ",
+        "soLuong": "20",
+        "giaTien": "204000",
+        "tacGia": "Tố Hữu",
+        "id": "79e4"
+      },
+      {
+        "ten": "không diệt không đừng sợ hãi",
+        "theLoai": "Văn học",
+        "soLuong": "20",
+        "giaTien": "204000",
+        "tacGia": "Thích Nhất Hạnh",
+        "id": "9af8"
+      },
+      { 
+        "ten": "Trí tuệ người Do Thái",
+        "theLoai": "ký năng sống",
+        "soLuong": "20",
+        "giaTien": "104000",
+        "tacGia": "Eran Katz",
+        "id": "44e8"
+      },
+      {
+        "ten": "Nhật ký trong tù",
+        "theLoai": "Thơ",
+        "soLuong": "25",
+        "giaTien": "104000",
+        "tacGia": "Hồ Chí Minh",
+        "id": "46b6"
+      }
+    ]
+    
+  }

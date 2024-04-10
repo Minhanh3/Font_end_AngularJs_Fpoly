@@ -1,0 +1,36 @@
+<h1>
+    {{title}}
+</h1>
+<div class="table-responsive">
+    <table class="table table-primary">
+        <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">ho_ten</th>
+                <th scope="col">sdt</th>
+                <th scope="col">email</th>
+                <th scope="col">chuc_vu</th>
+                <th scope="col">ngay_sinh</th>
+                <th scope="col">hoat dong</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="" ng-repeat="item in listnv">
+                <td scope="row">{{item.id}}</td>
+                <td>{{item.ho_ten}}</td>
+                <td>{{item.sdt}} </td>
+                <td> {{item.email}}</td>
+                <td> {{item.chuc_vu}}</td>
+                <td> {{item.ngay_sinh | date: "dd/MM/yyyy"}} </td>
+                <td>
+                    <a href="#!detail/employee/{{item.id}}"><button type="button" class="btn btn-primary">Chi
+                            tiết</button></a>
+                    <a href="#!detail/employee/{{item.id}}"><button type="button" class="btn btn-primary">Chi
+                            </button></a>
+                    <a href="#!detail/employee/{{item.id}}"><button type="button" class="btn btn-primary">Chi
+                            </button></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

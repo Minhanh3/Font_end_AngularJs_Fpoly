@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+</head>
+
+<body ng-app="myApp">
+    <div class="container">
+        <header>
+            <h1>Manh dz</h1>
+        </header>
+        <div>
+            <div class="row">
+                <div class="col-sm-5">
+                    <img width="500"
+                        src="data:image/jpeg;base64,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"
+                        alt="">
+                </div>
+                <div class="col-sm-7" ng-controller="studentCtrl">
+                    <h1>Infomation Student Fpoly Ha Noi</h1>
+                    <ul class="h4" ">
+                        <li>Fullname: {{info.fullname}}</li>
+                        <li>Birthday: {{info.Birthday}}</li>
+                        <li>Gender: {{info.Gender}} </li>
+                        <li>Mark: {{info.Mark}} </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class=" mt-5" ng-controller="studentCtrl">
+                        <div class="row">
+                            <table class="table table-striped table-hover table-borderless table-primary align-middle">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>STT</th>
+                                        <th>Fullname</th>
+                                        <th>Birthday </th>
+                                        <th>Gender</th>
+                                        <th>Mark</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-group-divider">
+                                    <tr class="table" ng-repeat="st in info">
+                                        <th>{{$index+1}} </th>
+                                        <th>{{st.fullname}}</th>
+                                        <th>{{st.Birthday}}</th>
+                                        <th>{{st.Gender}}</th>
+                                        <th>{{st.Mark}}</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                </div>
+                <div class="row" >
+                    <div ng-controller="countclick" class="col-sm-5">
+                        <div class="h3">Bài click chuột</div>
+                        <h1>Count: {{count}} </h1>
+                        <div class="h1" ng-mousemove="click()">Re chuôt vào đây</div>
+                        <button ng-click="click()" type="submit" class="btn btn-primary">
+                            Button
+                        </button>
+                    </div>
+                    <div class="col-sm-7">
+                        <h1>Manh day ne</h1>
+                        <form>
+                            <label for="inputName" class="col-4 col-form-label"> </label>
+                            <div class="">
+                                <label for="">Chiều dài</label>
+                                <input type="text" class="form-control" name="inputName" id="inputName"
+                                    placeholder="Name" />
+                            </div>
+                            <div class="">
+                                <label for="">Chiều rộng</label>
+                                <input type="text" class="form-control" name="inputName" id="inputName" placeholder="Name" />
+                            </div>
+                            <div class="">
+                                <label for="">Chiều Chu vi:</label>
+                                <input type="text" class="form-control" name="inputName" id="inputName" placeholder="Name" />
+                            </div>
+                            <div class="">
+                                <label for="">Dien tich</label>
+                                <input type="text" class="form-control" name="inputName" id="inputName" placeholder="Name" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="pb-5">manh</div>
+            </div>
+            <script>
+                let app = angular.module("myApp", [])
+                app.controller("countclick", function ($scope) {
+                    $scope.count = 0;
+                    $scope.click = function () {
+                        $scope.count++;
+                    }
+                })
+                app.controller("studentCtrl", function ($scope) {
+                    $scope.info = [
+                        {
+                            fullname: "Nguyen Duc Manh",
+                            Birthday: '30-01-2003',
+                            Gender: "Nam",
+                            Mark: "10"
+                        }
+                        , {
+                            fullname: "teo",
+                            Birthday: '30-01-2003',
+                            Gender: "Nam",
+                            Mark: "10"
+                        }, {
+                            fullname: "heo",
+                            Birthday: '30-01-2003',
+                            Gender: "Nam",
+                            Mark: "10"
+                        }, {
+                            fullname: "keo",
+                            Birthday: '30-01-2003',
+                            Gender: "Nam",
+                            Mark: "10"
+                        }
+                    ]
+                });
+                app.controller("arrayLisst", function ($scope) {
+                    $scope.lists = [1, 2, 3, 5, 4, 7, 44, 33]
+                })
+            </script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+                integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+                crossorigin="anonymous"></script>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+                integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+                crossorigin="anonymous"></script>
+</body>
+
+</html>

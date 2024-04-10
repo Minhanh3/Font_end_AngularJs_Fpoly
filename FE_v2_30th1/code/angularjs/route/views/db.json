@@ -1,0 +1,44 @@
+{
+  "danhmuc": [
+    {
+      "id": "dm01",
+      "ten": "Đồ bếp"
+    },
+    {
+      "id": "dm02",
+      "ten": "Đồ tắm"
+    }
+  ],
+  "san-pham": [
+    {
+      "id": "SP001",
+      "ten": "Muôi xứ nghệ thuật",
+      "giaban": 1000000,
+      "idDanhMuc": "dm01",
+      "tenDanhMuc": "Đồ bếp"
+    },
+    {
+      "id": "SP002",
+      "ten": "Bát xứ nghệ thuật",
+      "giaban": 1000000,
+      "idDanhMuc": "dm01",
+      "tenDanhMuc": "Đồ bếp"
+    }
+  ],
+  "students": [
+    {
+      "ten": "Đoàn Trọng Thưởng",
+      "msv": "PH32071",
+      "queQuan": "Hà Nam",
+      "gioiTinh": "Nam",
+      "id": "181c"
+    },
+    {
+      "ten": "Đỗ Thị Ánh Ngọc",
+      "msv": "PH31547",
+      "queQuan": "Hà Nội",
+      "gioiTinh": "Nữ",
+      "id": "4c17"
+    }
+  ]
+}

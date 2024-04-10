@@ -1,0 +1,42 @@
+{
+  "danh-muc": [
+    {
+      "id": "DM01",
+      "ten": "Do nhà bếp"
+    },
+    {
+      "id": "DM02",
+      "ten": "Do nhà tắm"
+    },
+    {
+      "id": "DM03",
+      "ten": "Do nhà khách"
+    }
+  ],
+  "san-pham": [
+    {
+      "id": "SP01",
+      "ten": "Dung cụ gắp đớ",
+      "giaBan": 10000000,
+      "idDanhMuc": "DM01"
+    },
+    {
+      "id": "SP02",
+      "ten": "Dung cụ gắp đồ cá",
+      "giaBan": 132444444,
+      "idDanhMuc": "DM02"
+    },
+    {
+      "id": "SP03",
+      "ten": "Dung cụ gắp có dớ",
+      "giaBan": 235444444,
+      "idDanhMuc": "DM03"
+    },
+    {
+      "id": "SP04",
+      "ten": "Dung cụ gắp có vàng",
+      "giaBan": 235444444,
+      "idDanhMuc": "DM03"
+    }
+  ]
+}

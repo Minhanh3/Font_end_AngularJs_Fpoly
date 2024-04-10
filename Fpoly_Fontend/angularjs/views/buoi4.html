@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+    <script src="../libs/angular.min.js"></script>
+</head>
+<!-- ng-/ dirvective( chỉ thị): dùng để mở rộng khả năng của html  -->
+<!-- ng-app: dùng để định nghĩa vùng chúng ta sử dụng angular -->
+
+<body ng-app="myApp">
+    <!-- đưa vào thẻ body dùng angular cho toàn bộ phần này -->
+    <div class="container">
+        <div ng-controller="testcontroller" class="mt-5">
+            <h1>Lời Chào: {{info.xinchao}}</h1>
+            <!-- <h2>Tuổi của tôi: {{tuoi}}</h2> -->
+        </div>
+        <div ng-controller="controller" class="">
+            <h3>Tên: {{info.ten}}</h3>
+            <h3>Tuổi: {{info.tuoi}}</h3>
+            <h3>Địa Chỉ: {{info.dc}}</h3>
+            <h3>Tên Ex: {{info.tenex}}</h3>
+            <h3>Ngày Ctay: {{info.day}}</h3>
+        </div>
+        <hr>
+        <div ng-controller="datastudent">
+            <h4>Tên Lớp:{{info.tenlop}}</h4>
+            <h4>Tên Môn:{{info.tenmon}}</h4>
+            <h4>Ca học:{{info.cahoc}}</h4>
+            <div >
+                <table class="table table-info">
+                    <thead>
+                        <th>Tên</th>
+                        <th>Tuổi</th>
+                        <th>Chuyên Nghành</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>{{student[0].tenny}}</th>
+                            <th>{{student[0].tuoi}}</th>
+                            <th>{{student[0].chuyenghanh}}</th>
+                        </tr>
+                        <tr>
+                            <th>{{student[1].tenny}}</th>
+                            <th>{{student[1].tuoi}}</th>
+                            <th>{{student[1].chuyenghanh}}</th>
+                        </tr>
+                        <tr>
+                            <th>{{student[2].tenny}}</th>
+                            <th>{{student[2].tuoi}}</th>
+                            <th>{{student[2].chuyenghanh}}</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <hr>
+            <div >
+                <table class="table table-bordered border-primary" > 
+                    <thead>
+                        <th>Tên</th>
+                        <th>Tuổi</th>
+                        <th>Chuyên Nghành</th>
+                    </thead>
+                    <tbody ng-repeat='item in student'>
+                        <tr>
+                            <th>{{item.tenny}}</th>
+                            <th>{{item.tuoi}}</th>
+                            <th>{{item.chuyenghanh}}</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    // khởi tạo modele
+    // đặt angular cho vùng myApp (body)
+    let data = angular.module('myApp', [])
+    // 2 tham số trong module( tên của ng-app, thành phần phụ thuộc)
+    // khởi tạo vùng controller
+    data.controller('testcontroller', myFunction);
+    // 2 tham số trong controller( tên của controller , tên của function)
+    function myFunction($scope) {
+        $scope.info = {
+            xinchao: 'Hello cac con giờiaaaaaaaa',
+            ten: 'manhdz',
+            tuoi: '16',
+            dc: 'Tho Tang , Vinh Phuc',
+            tenex: 'manh duc',
+            day: '2033'
+        }
+    }
+
+    data.controller('controller', info1);
+    // 2 tham số trong controller( tên của controller , tên của function)
+    function info1($scope) {
+        $scope.info = {
+            xinchao: 'Hello cac con giời',
+            ten: 'manhdz',
+            tuoi: '16',
+            dc: 'Tho Tang , Vinh Phuc',
+            tenex: 'manh duc',
+            day: '2033'
+        }
+    }
+    
+        data.controller('datastudent', infostudent);
+        // 2 tham số trong controller( tên của controller , tên của function)
+        function infostudent($scope) {
+            $scope.info = {
+                tenlop: 'manhdz',
+                tenmon: 'cnnt',
+                cahoc: 5,
+            }
+            $scope.student= [
+                {
+                    tenny:'Nguyen duc manh',
+                    tuoi:19,
+                    chuyenghanh:'cntt'
+                },
+                {
+                    tenny: 'Nguyen thi trang',
+                    tuoi: 20,
+                    chuyenghanh: 'cntt'
+                },
+                {
+                    tenny: 'Tong thu giang',
+                    tuoi: 19,
+                    chuyenghanh: 'cntt'
+                },
+                {
+                    tenny: 'Ha thu giang',
+                    tuoi: 19,
+                    chuyenghanh: 'cntt'
+                },
+                {
+                    tenny: 'Tong thu hang',
+                    tuoi: 19,
+                    chuyenghanh: 'cntt'
+                },
+                {
+                    tenny: 'Nguyen thu giang',
+                    tuoi: 19,
+                    chuyenghanh: 'cntt'
+                },
+            ]
+        }
+</script>
+
+</html>

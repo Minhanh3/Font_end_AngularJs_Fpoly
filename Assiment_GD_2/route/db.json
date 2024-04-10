@@ -1,0 +1,64 @@
+{
+  "sachs": [
+    {
+      "name": "Nhà giả kim",
+      "tacgia": "ManhNg",
+      "ngongu": "Anh",
+      "theloai": "Tiểu Thuyết",
+      "sotrang": 500,
+      "giaban": 600000,
+      "nxban": "ManhDC",
+      "id": "S02"
+    },
+    {
+      "name": "Nhà giả kim",
+      "tacgia": "ManhNg",
+      "ngongu": "Anh",
+      "theloai": "Tiểu Thuyết",
+      "sotrang": 211,
+      "giaban": 340000,
+      "nxban": "ManhDC",
+      "id": "S03"
+    },
+    {
+      "name": "Nhà giả kim",
+      "tacgia": "ManhNg",
+      "ngongu": "Anh",
+      "theloai": "Tình cảm",
+      "sotrang": 322,
+      "giaban": 232222,
+      "nxban": "ManhDC",
+      "id": "S04"
+    },
+    {
+      "id": "8187",
+      "name": "bà ơi di đâu thế",
+      "tacgia": "manhdz",
+      "ngongu": "Trung Quốc",
+      "theloai": "Tâm Lý",
+      "sotrang": 200,
+      "giaban": 230000,
+      "nxban": "hai nam"
+    },
+    {
+      "name": "đắc nhân tâm",
+      "tacgia": "ManhNg",
+      "ngongu": "Anh",
+      "theloai": "Tiểu Thuyết",
+      "sotrang": 200,
+      "giaban": 400000,
+      "nxban": "ManhDC",
+      "id": "baf7"
+    },
+    {
+      "id": "77c9",
+      "name": "Nhà giả kim",
+      "tacgia": "ManhNg",
+      "ngongu": "Tiếng Việt",
+      "theloai": "Thiếu Nhi",
+      "sotrang": 2222,
+      "giaban": 1111,
+      "nxban": "ManhDCsss"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+<div class="h3">
+    Danh sách Sản phẩm
+</div>
+<div>{{title}}</div>
+<form action="" ng-submit="addSach()">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="mb-3">
+                <label for="name" class="form-label">Tên Sách</label>
+                <input ng-model="sach.name" type="text" minlength="10" maxlength="100" name="name" id=""
+                    class="form-control" placeholder="" aria-describedby="helpId" />
+                <small id="helpId" ng-if="check" class="text-muted">{{checkMessageName}}</small>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="mb-3">
+                <label for="tacgia" class="form-label">Tác Giả</label>
+                <input ng-model="sach.tacgia" type="text" name="tacgia" minlength="3" maxlength="100" id="" 
+                    class="form-control" placeholder="" aria-describedby="helpId" />
+                <small id="helpId" ng-if="check" class="text-muted">{{checkMessageTacGia}}</small>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <label for="ngongu" class="form-label">Ngôn Ngữ</label>
+            <select ng-model="sach.ngongu" class="form-select" id="" name="ngongu" >
+                <option value="Anh" selected>Anh</option>
+                <option value="Tiếng Việt">Tiếng Việt</option>
+                <option value="Trung Quốc">Trung Quốc</option>
+                <option value="Nhật Bản">Nhật Bản</option>
+                <option value="Hàn Quốc">Hàn Quốc</option>
+            </select>
+        </div>
+        <div class="col-sm-6">
+            <label for="theloai" class="form-label">Thể Loại</label>
+            <select ng-model="sach.theloai" class="form-select" id="" name="theloai" >
+                <option value="Thiếu Nhi" selected>Thiếu Nhi</option>
+                <option value="Tâm Lý">Tâm Lý</option>
+                <option value="Tình cảm">Tình cảm</option>
+                <option value="Tiểu Thuyết">Tiểu Thuyết</option>
+                <option value="Văn hóa xã hội">Văn hóa xã hội</option>
+            </select>
+        </div>
+        <div class="col-sm-6">
+            <div class="mb-3">
+                <label for="sotrang" class="form-label">Số Trang</label>
+                <input ng-model="sach.sotrang" type="number"   name="sotrang" id=""
+                    class="form-control" placeholder="" aria-describedby="helpId" />
+                <small id="" ng-if="check" class="text-danger">{{checkMessageSoTrang}}</small>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="mb-3">
+                <label for="giaban" class="form-label">Giá Bán</label>
+                <input ng-model="sach.giaban" type="number" min="" max="10000000"  name="giaban" id=""
+                    class="form-control" placeholder="" aria-describedby="" />
+                <small id="" ng-if="check" class="text-danger">{{checkMessageGiaBan}}</small>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="mb-3">
+                <label for="nxban" class="form-label">Nhà Xuất Bản</label>
+                <input ng-model="sach.nxban" type="text" minlength="3" maxlength="100"  name="nxban" id=""
+                    class="form-control" placeholder="" aria-describedby="helpId" />
+                <small id="" ng-if="check" class="text-danger">{{checkMessageNXB}}</small>
+            </div>
+        </div>
+    </div>
+    <a href="#!trang-chu"><button type="button" class="btn btn-info">Quay Lại</button> </a>
+    <button type="submit" class="btn btn-danger">Thêm</button>
+</form>

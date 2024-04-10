@@ -1,0 +1,20 @@
+{
+  "nhan-vien": [
+    {
+      "id": "1",
+      "ho_ten": "manhdz",
+      "sdt": "09343",
+      "email": "manh@gmail.com",
+      "chuc_vu": "Trưởng phòng",
+      "ngay_sinh": "30/2/1222"
+    },
+    {
+      "id": "8714",
+      "ho_ten": "đaa",
+      "sdt": "ddddddd",
+      "email": "d",
+      "chuc_vu": "Trưởng phòng",
+      "ngay_sinh": "2024-02-15T17:00:00.000Z"
+    }
+  ]
+}

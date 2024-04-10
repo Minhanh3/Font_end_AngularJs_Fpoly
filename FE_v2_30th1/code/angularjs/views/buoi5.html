@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js "></script>
+    <script src="/code/angularjs/libs/angular.min.js"></script>
+    <title>Buổi 5</title>
+</head>
+
+<body ng-app="myApp" class="text-center">
+    <!-- -Tích hợp bootstrap
+    -Tích hợp angularJS
+    -Khởi tạo môi trường, khởi tạo vùng
+        +Vùng chứa thông tin lớp học gồm: Tên lớp, mã lớp, số lượng và danh sách sinh viên
+    -Giao diện hiển thị gồm:
+    Thông tin dạng text
+     +2 ô input: số lượng sinh viên + lọc tên sinh viên
+    Danh sách sinh viên dạng bảng- ng-repeat -->
+    <div class="container">
+        <div ng-controller="infor">
+            <div>
+                <h1>Thông tin lớp học</h1>
+                <p>Tên lớp: {{tenLop}}</p>
+                <p>Mã lớp: {{maLop}}</p>
+                <p>Số lượng: {{soLuong}}</p>
+            </div>
+            <!-- Model trong angularJS
+            dùng để liên kết dữ liệu 2 chiều trong html -->
+            <div class="row">
+                <div class="col-4 mb-3">
+                    <label for="tenLop" class="form-label">Nhập tên lớp</label>
+                    <input ng-model="tenLop" type="text" class="form-control" id="tenLop" placeholder="Nhập tên lớp">
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="maLop" class="form-label">Nhập mã lớp</label>
+                    <input ng-model="maLop" type="text" class="form-control" id="maLop" placeholder="Nhập mã lớp">
+                </div>
+                <div class="col-4 mb-3">
+                    <label for="soLuong" class="form-label">Nhập số lượng</label>
+                    <input ng-model="soLuong" type="text" class="form-control" id="soLuong" placeholder="Nhập số lượng">
+                </div>
+                <div class="col-6 mb-3">
+                    <label for="soLuong" class="form-label">Số lượng sinh viên hiển thị</label>
+                    <input ng-model="soLuongNhap" type="text" class="form-control" id="soLuongNhap"
+                        placeholder="Chọn số lượng sinh viên">
+                </div>
+                <div class="col-6 mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Lọc tên sinh viên</label>
+                    <input ng-model="tenSV" type="text" class="form-control" id="tenSV"
+                        placeholder="Nhập tên sinh viên cần lọc">
+                </div>
+            </div>
+            <table border="1" class="table table-hover" style="width: 100%;">
+                <thead class="table-primary">
+                    <th>STT</th>
+                    <th>Mã sinh viên</th>
+                    <th>Tên</th>
+                    <th>Tuổi</th>
+                    <th>Chuyên ngành</th>
+                </thead>
+                <!-- limitTo: Quy định số lượng phần tử tỏng mảng được hiển thị ra
+                filter: Lọc theo điều kiện -->
+                <tbody ng-repeat="item in sinhVien| limitTo: soLuongNhap |filter: tenSV  ">
+                    <tr>
+                        <td>{{$index+1}}</td>
+                        <td>{{item.msv}}</td>
+                        <td>{{item.ten}}</td>
+                        <td>{{item.tuoi}}</td>
+                        <td>{{item.chuyenNganh}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</body>
+<script>
+    let data = angular.module('myApp', []);
+    data.controller('infor', thongTin);
+    function thongTin($scope) {
+        $scope.tenLop = 'SP2024 - FEFW - SD18306 - WEB207';
+        $scope.maLop = 'SD18306';
+        $scope.soLuong = '6';
+        $scope.soLuongNhap = '',
+        $scope.tenSV = '',
+            $scope.sinhVien = [
+                {
+                    msv: 'PH32021',
+                    ten: 'Trương Nhật Toàn',
+                    tuoi: '20',
+                    chuyenNganh: 'PTPM'
+
+                },
+                {
+                    msv: 'PH32064',
+                    ten: 'Đoàn Trọng Thưởng',
+                    tuoi: '20',
+                    chuyenNganh: 'PTPM'
+                },
+                {
+                    msv: 'PH32074',
+                    ten: 'Lưu Xuân Tài',
+                    tuoi: '20',
+                    chuyenNganh: 'PTPM'
+                },
+                {
+                    msv: 'PH35472',
+                    ten: 'Nguyễn Quỳnh Kiên',
+                    tuoi: '20',
+                    chuyenNganh: 'PTPM'
+
+                },
+                {
+                    msv: 'PH31547',
+                    ten: 'Đỗ Thị Oánh Ngọc',
+                    tuoi: '20',
+                    chuyenNganh: 'PTPM'
+                },
+                {
+                    msv: 'PH31790',
+                    ten: 'Nguyễn Em Thư',
+                    tuoi: '20',
+                    chuyenNganh: 'PTPM'
+                }
+            ]
+    }
+</script>
+
+</html>

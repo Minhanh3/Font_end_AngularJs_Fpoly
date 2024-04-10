@@ -1,0 +1,36 @@
+{
+  "sach": [
+    {
+      "tieu_de": "trnagdz",
+      "noi_dung": "anhdz",
+      "tac_gia": "manhdz",
+      "the_loai": "Tiểu Thuyết",
+      "ngay_dang": "2024-02-22T17:00:00.000Z",
+      "id": "540c"
+    },
+    {
+      "tieu_de": "manhdz",
+      "noi_dung": "fdsf",
+      "tac_gia": "sdfsd",
+      "the_loai": "Truyện Ngắn",
+      "ngay_dang": "2024-02-12T17:00:00.000Z",
+      "id": "945e"
+    },
+    {
+      "id": "6433",
+      "tieu_de": "",
+      "noi_dung": "",
+      "tac_gia": "",
+      "the_loai": "",
+      "ngay_dang": null
+    },
+    {
+      "id": "6466",
+      "tieu_de": "",
+      "noi_dung": "",
+      "tac_gia": "",
+      "the_loai": "",
+      "ngay_dang": null
+    }
+  ]
+}
