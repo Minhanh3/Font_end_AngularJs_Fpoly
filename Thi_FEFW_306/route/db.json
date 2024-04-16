@@ -1,0 +1,34 @@
+{
+  "oto": [
+    {
+      "id": "1dbd",
+      "ten": "mec 3 chan",
+      "hang": "Hyudai ",
+      "gia": "1000000000"
+    },
+    {
+      "id": "6522",
+      "ten": "aa",
+      "hang": "Toyota ",
+      "gia": "222222222"
+    },
+    {
+      "id": "d00f",
+      "ten": "dfd",
+      "hang": "Toyota ",
+      "gia": "33333333333"
+    },
+    {
+      "id": "55a5",
+      "ten": "ssssss",
+      "hang": "Kia",
+      "gia": "333333333333"
+    },
+    {
+      "id": "8693",
+      "ten": "fffffffff",
+      "hang": "Hyudai",
+      "gia": "4444444444444"
+    }
+  ]
+}
